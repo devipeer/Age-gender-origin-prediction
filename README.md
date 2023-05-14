@@ -64,4 +64,24 @@ Accuracy: 0.89
 
 Age:  
 $R^2$ score = 0.75
+
+### Example of prediction: 
+![ExamplePrediction](https://github.com/devipeer/Age-gender-origin-prediction/blob/main/example_prediction.png)
+
+## Conlusions:
+The hardest part and what took the most amount of time during the work on this project
+was to prepare data. At first I was trying to use DataImageGenerator for the
+preparing and augmentation, but it was working only for dataset with one label, in my
+case there were 3 labels. That is why I had to do all the preparation manually. Second
+hardest part was to build model that will obtain good results. I am only partially
+satisfied with the results that I obtained. We can see that model is the best at
+predicting Gender specially ‘Male’ class, where precision is at very high level of 0.92, the
+overall accuracy here equals 0.89, which is a very good score. When we take Ethnicity
+into consideration it does not look that good. The model is good at predicting ‘Black’ and
+‘Asian’ classes, acceptable for predicting ‘White’ and ‘Indian’ class, but It is not doing so
+well in predicting ‘Others’ class, which can be understandable, because there are
+multiple ethnicities included there with not much in common. R-squared score in a
+regression problem equals 0.75, which is acceptable, because even for human beings It is
+sometimes very hard to predict someone’s age. 
+
 ### To check the results go to Jupyter Notebook file(.ipynb)
