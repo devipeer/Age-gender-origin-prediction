@@ -11,14 +11,43 @@ from 0 to 4, where 0 - White, 1 - Black, 2 - Asian, 3 - Indian, and 4 - Others (
 Latino, Middle Eastern). The last label is gender, which is a binary label, where 0 - Male, 1 -
 Female. 
 
-### Problem definiton:  
-Deep learning model for classification and regression problems based on face images.  
-  
-Competition link: [Kaggle](https://www.kaggle.com/datasets/nipunarora8/age-gender-and-ethnicity-face-data-csv)  
+Dataset link: [Kaggle](https://www.kaggle.com/datasets/nipunarora8/age-gender-and-ethnicity-face-data-csv)  
+
+## Problem definiton:  
+The problem is to build a model that will predict all three features mentioned in previous
+section. Gender and Ethnicity predictions are a classification problem, where in case of
+gender there are 2 possible outcomes and in case of ethnicity 5 possible outcomes. Age
+prediction is more of a regression problem, because we are dealing with specific value of
+age. There is no missing values in the dataset and we decided to not remove any of the data,
+because of outliers, which the people with highest age(90+ years old) were detected as so,
+for the reason that in real life this is also the smallest group in the society and we want to
+train model as it would be able to predict their age too. One of the issues that may be a
+reason of poor quality for predicting ethnicity is that, the images are in just 1 channel, which
+doesn’t gives any information about peoples skin color, which is probably the biggest
+difference between all races. Quality of the images may cause poor decisions of model as
+well, because its only 48x48 quality.  
+Model should take as an input batches of images and outputs 3 values, which are age,
+ethnicity and gender of each person in the image. We decided to use TensorFlow library for
+this problem.
 
 Project contains: 
 - Basic statistial analysis with visualization(Histogram, barplots)
-- 
+- Data preprocessing
+- Image augmentation
 
-F1 Score: 0.83 obtained by XGBoost technique
+### Model structure: 
+[Model structure](https://github.com/devipeer/Age-gender-origin-prediction/blob/main/model_structure.png)
+
+
+### Model Performance: 
+  
+Ethnicity:
+|        | Precision | Sensitivity | F1-Score |
+|--------|-----------|-------------|----------|
+| White  |    0.75   |    0.9      |   0.82   |
+| Black  |    0.83   |    0.82     |   0.82   |
+| Asian  |    0.82   |    0.78     |   0.80   |
+| Indian |    0.72   |    0.65     |   0.68   |
+| Others |    0.62   |    0.05     |   0.09   |
+Accuracy = 0.76
 ### To check the results go to Jupyter Notebook file(.ipynb)
