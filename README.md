@@ -36,7 +36,7 @@ Project contains:
 - Image augmentation
 
 ### Model structure: 
-[Model structure](https://github.com/devipeer/Age-gender-origin-prediction/blob/main/model_structure.png)
+![Model structure](https://github.com/devipeer/Age-gender-origin-prediction/blob/main/model_structure.png)
 
 
 ### Model Performance: 
