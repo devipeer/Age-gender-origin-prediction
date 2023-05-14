@@ -49,5 +49,6 @@ Ethnicity:
 | Asian  |    0.82   |    0.78     |   0.80   |
 | Indian |    0.72   |    0.65     |   0.68   |
 | Others |    0.62   |    0.05     |   0.09   |
+
 Accuracy = 0.76
 ### To check the results go to Jupyter Notebook file(.ipynb)
