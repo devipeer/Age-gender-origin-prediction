@@ -62,6 +62,6 @@ Gender:
 Accuracy: 0.89
 
 
-Age:
-$(R^2)$ = 0.75
+Age:  
+$(R^2) score = 0.75
 ### To check the results go to Jupyter Notebook file(.ipynb)
