@@ -50,5 +50,18 @@ Ethnicity:
 | Indian |    0.72   |    0.65     |   0.68   |
 | Others |    0.62   |    0.05     |   0.09   |
 
-Accuracy = 0.76
+Accuracy = 0.76  
+
+
+Gender: 
+|        | Precision | Sensitivity | F1-Score |
+|--------|-----------|-------------|----------|
+| Male   |    0.92   |    0.85     |   0.89   |
+| Female |    0.85   |    0.92     |   0.89   |
+
+Accuracy: 0.89
+
+
+Age:
+$(R^2)$ = 0.75
 ### To check the results go to Jupyter Notebook file(.ipynb)
